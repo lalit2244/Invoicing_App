@@ -1,7 +1,7 @@
 // File: backend/controllers/authController.js
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const db = require('../config/database');
+const db = require('./database');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-this-in-production';
 const JWT_EXPIRES_IN = '24h';
@@ -83,4 +83,5 @@ exports.createUser = async (email, password) => {
     console.error('Create user error:', error);
     throw error;
   }
+
 };
