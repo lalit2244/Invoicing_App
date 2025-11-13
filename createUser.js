@@ -1,6 +1,6 @@
 // File: backend/createUser.js
 const bcrypt = require('bcrypt');
-const { pool } = require('./config/database');
+const { pool } = require('./database');
 
 async function createUser() {
   try {
@@ -24,3 +24,4 @@ async function createUser() {
 }
 
 createUser();
+
